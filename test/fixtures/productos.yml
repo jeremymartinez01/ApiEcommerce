@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pid: 1
+  usuario_id: 1
+  categoria: 1
+  nombre: MyString
+  descripcion: MyString
+  precio: 9.99
+  imagen: MyString
+
+two:
+  pid: 1
+  usuario_id: 1
+  categoria: 1
+  nombre: MyString
+  descripcion: MyString
+  precio: 9.99
+  imagen: MyString
