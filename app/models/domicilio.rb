@@ -1,0 +1,2 @@
+class Domicilio < ApplicationRecord
+end

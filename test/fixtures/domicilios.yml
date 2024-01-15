@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  did: 1
+  usuario_id: 1
+  ciudad: MyString
+  sector: MyString
+  calle_principal: MyString
+  calle_secundaria: MyString
+  villa: 1
+  cod_postal: MyString
+
+two:
+  did: 1
+  usuario_id: 1
+  ciudad: MyString
+  sector: MyString
+  calle_principal: MyString
+  calle_secundaria: MyString
+  villa: 1
+  cod_postal: MyString
