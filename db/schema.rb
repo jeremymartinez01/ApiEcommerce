@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_15_033316) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_15_034432) do
   create_table "categoria", force: :cascade do |t|
     t.integer "cid"
     t.string "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "detalles", force: :cascade do |t|
+    t.integer "detid"
+    t.integer "orden_oid"
+    t.integer "categoria"
+    t.integer "producto_pid"
+    t.integer "cantidad"
+    t.datetime "fecha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

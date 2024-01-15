@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  detid: 1
+  orden_oid: 1
+  categoria: 1
+  producto_pid: 1
+  cantidad: 1
+  fecha: 2024-01-14 22:44:32
+
+two:
+  detid: 1
+  orden_oid: 1
+  categoria: 1
+  producto_pid: 1
+  cantidad: 1
+  fecha: 2024-01-14 22:44:32
