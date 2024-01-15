@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :metodo_pagos
   resources :categoria
   resources :productos
   resources :usuarios

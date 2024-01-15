@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_15_013749) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_15_033316) do
+  create_table "categoria", force: :cascade do |t|
+    t.integer "cid"
+    t.string "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "domicilios", force: :cascade do |t|
     t.integer "did"
     t.integer "usuario_id"
@@ -20,6 +27,25 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_013749) do
     t.string "calle_secundaria"
     t.integer "villa"
     t.string "cod_postal"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "metodo_pagos", force: :cascade do |t|
+    t.integer "mpid"
+    t.string "metodo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "productos", force: :cascade do |t|
+    t.integer "pid"
+    t.integer "usuario_id"
+    t.integer "categoria"
+    t.string "nombre"
+    t.string "descripcion"
+    t.decimal "precio"
+    t.string "imagen"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
