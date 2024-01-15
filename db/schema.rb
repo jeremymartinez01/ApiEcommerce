@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_15_034432) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_15_034944) do
   create_table "categoria", force: :cascade do |t|
     t.integer "cid"
     t.string "nombre"
@@ -45,6 +45,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_034432) do
   create_table "metodo_pagos", force: :cascade do |t|
     t.integer "mpid"
     t.string "metodo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ordens", force: :cascade do |t|
+    t.integer "oid"
+    t.integer "usuario_uid"
+    t.integer "mpago_mpid"
+    t.integer "domicilio_did"
+    t.datetime "fecha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ordens
   resources :detalles
   resources :metodo_pagos
   resources :categoria

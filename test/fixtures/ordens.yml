@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  oid: 1
+  usuario_uid: 1
+  mpago_mpid: 1
+  domicilio_did: 1
+  fecha: 2024-01-14 22:49:44
+
+two:
+  oid: 1
+  usuario_uid: 1
+  mpago_mpid: 1
+  domicilio_did: 1
+  fecha: 2024-01-14 22:49:44
