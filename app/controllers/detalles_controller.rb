@@ -46,6 +46,6 @@ class DetallesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def detalle_params
-      params.require(:detalle).permit(:detid, :orden_oid, :categoria, :producto_pid, :cantidad, :fecha)
+      params.require(:detalle).permit(:detid, :orden_oid, :producto_pid, :cantidad, :fecha)
     end
 end

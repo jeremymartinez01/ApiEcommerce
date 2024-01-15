@@ -12,7 +12,7 @@ class DetallesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create detalle" do
     assert_difference("Detalle.count") do
-      post detalles_url, params: { detalle: { cantidad: @detalle.cantidad, categoria: @detalle.categoria, detid: @detalle.detid, fecha: @detalle.fecha, orden_oid: @detalle.orden_oid, producto_pid: @detalle.producto_pid } }, as: :json
+      post detalles_url, params: { detalle: { cantidad: @detalle.cantidad, detid: @detalle.detid, fecha: @detalle.fecha, orden_oid: @detalle.orden_oid, producto_pid: @detalle.producto_pid } }, as: :json
     end
 
     assert_response :created
@@ -24,7 +24,7 @@ class DetallesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update detalle" do
-    patch detalle_url(@detalle), params: { detalle: { cantidad: @detalle.cantidad, categoria: @detalle.categoria, detid: @detalle.detid, fecha: @detalle.fecha, orden_oid: @detalle.orden_oid, producto_pid: @detalle.producto_pid } }, as: :json
+    patch detalle_url(@detalle), params: { detalle: { cantidad: @detalle.cantidad, detid: @detalle.detid, fecha: @detalle.fecha, orden_oid: @detalle.orden_oid, producto_pid: @detalle.producto_pid } }, as: :json
     assert_response :success
   end
 

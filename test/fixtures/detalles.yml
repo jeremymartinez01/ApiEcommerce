@@ -3,15 +3,13 @@
 one:
   detid: 1
   orden_oid: 1
-  categoria: 1
   producto_pid: 1
   cantidad: 1
-  fecha: 2024-01-14 22:44:32
+  fecha: 2024-01-14 22:58:47
 
 two:
   detid: 1
   orden_oid: 1
-  categoria: 1
   producto_pid: 1
   cantidad: 1
-  fecha: 2024-01-14 22:44:32
+  fecha: 2024-01-14 22:58:47

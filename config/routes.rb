@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :ordens
   resources :detalles
+  resources :ordens
   resources :metodo_pagos
   resources :categoria
   resources :productos
