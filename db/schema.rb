@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_21_214921) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_21_223705) do
   create_table "categoria", primary_key: "cid", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", null: false
@@ -54,7 +54,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_21_214921) do
   end
 
   create_table "productos", primary_key: "pid", force: :cascade do |t|
-    t.integer "usuario_id"
     t.integer "categoria"
     t.string "nombre"
     t.string "descripcion"
@@ -74,4 +73,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_21_214921) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "detalles", "ordens", column: "orden_oid", primary_key: "oid"
+  add_foreign_key "detalles", "productos", column: "producto_pid", primary_key: "pid"
+  add_foreign_key "domicilios", "usuarios", primary_key: "uid"
+  add_foreign_key "ordens", "domicilios", column: "domicilio_did", primary_key: "did"
+  add_foreign_key "ordens", "metodo_pagos", column: "mpago_mpid", primary_key: "mpid"
+  add_foreign_key "ordens", "usuarios", column: "usuario_uid", primary_key: "uid"
+  add_foreign_key "productos", "categoria", column: "categoria", primary_key: "cid"
 end
