@@ -10,16 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_15_035847) do
-  create_table "categoria", force: :cascade do |t|
-    t.integer "cid"
+ActiveRecord::Schema[7.1].define(version: 2024_01_21_214921) do
+  create_table "categoria", primary_key: "cid", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "detalles", force: :cascade do |t|
-    t.integer "detid"
+  create_table "detalles", primary_key: "detid", force: :cascade do |t|
     t.integer "orden_oid"
     t.integer "producto_pid"
     t.integer "cantidad"
@@ -28,8 +26,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_035847) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "domicilios", force: :cascade do |t|
-    t.integer "did"
+  create_table "domicilios", primary_key: "did", force: :cascade do |t|
     t.integer "usuario_id"
     t.string "ciudad"
     t.string "sector"
@@ -41,15 +38,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_035847) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "metodo_pagos", force: :cascade do |t|
-    t.integer "mpid"
+  create_table "metodo_pagos", primary_key: "mpid", force: :cascade do |t|
     t.string "metodo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "ordens", force: :cascade do |t|
-    t.integer "oid"
+  create_table "ordens", primary_key: "oid", force: :cascade do |t|
     t.integer "usuario_uid"
     t.integer "mpago_mpid"
     t.integer "domicilio_did"
@@ -58,8 +53,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_035847) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "productos", force: :cascade do |t|
-    t.integer "pid"
+  create_table "productos", primary_key: "pid", force: :cascade do |t|
     t.integer "usuario_id"
     t.integer "categoria"
     t.string "nombre"
@@ -70,12 +64,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_035847) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "usuarios", force: :cascade do |t|
-    t.integer "uid"
+  create_table "usuarios", primary_key: "uid", force: :cascade do |t|
     t.string "nombre"
     t.string "apellido"
-    t.string "user"
-    t.string "password"
     t.string "cedula"
     t.string "telefono"
     t.string "correo"
