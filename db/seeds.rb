@@ -8,7 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-'''
 Categorium.create(cid: 1,nombre: "Celulares");
 Categorium.create(cid: 2,nombre: "Tvs");
 Detalle.create(detid: 1,orden_oid: 1,producto_pid: 1,cantidad: 2,fecha: DateTime.now);
@@ -18,9 +17,9 @@ MetodoPago.create( mpid: 1,metodo: "Tarjeta de crédito");
 Orden.create(oid: 1,usuario_uid: 1,mpago_mpid: 1,domicilio_did: 1,fecha: DateTime.now);
 Producto.create(pid: 1,usuario_id: 1,categoria: 1,nombre: "Laptop",descripcion: "Portátil de última generación",precio: 1200.50,imagen: "laptop.jpg");
 Usuario.create(uid: 1,nombre: "Juan",apellido: "Pérez",user: "juanperez",password: "secreto123",cedula: "1234567890",telefono: "0987654321",correo: "juan@example.com");
-'''
+
 ## CATEGORIAS
-'''
+
 Categorium.create(nombre: "Computadoras de mesa");
 Categorium.create(nombre: "Celulares");
 Categorium.create(nombre: "Tablets");
@@ -29,16 +28,16 @@ Categorium.create(nombre: "Laptops");
 Categorium.create(nombre: "Periféricos y Dispositivos");
 Categorium.create(nombre: "Consolas");
 Categorium.create(nombre: "Televisores");
-'''
+
 ## METODO PAGO
-'''
+
 MetodoPago.create(metodo: "Transferencia Bancaria");
 MetodoPago.create(metodo: "Tarjeta de Crédito");
 MetodoPago.create(metodo: "Tarjeta de Débito");
-'''
+
 ## PRODUCTOS
 
-# Producto.create(categoria: 1, nombre: "Cpu Usado Core i5 4ta, 4gb+320gb, hp, lenovo", descripcion: "Procesador: Intel Core i5 4ta generación. Sistema Operativo: Microsoft Windows 10. RAM: 4 GB. Almacenamiento: 320 GB. Con unidad óptica.", precio: 146.50, imagen: "https://i.ibb.co/RCXt6Vm/166806-800-auto.png")
+Producto.create(categoria: 1, nombre: "Cpu Usado Core i5 4ta, 4gb+320gb, hp, lenovo", descripcion: "Procesador: Intel Core i5 4ta generación. Sistema Operativo: Microsoft Windows 10. RAM: 4 GB. Almacenamiento: 320 GB. Con unidad óptica.", precio: 146.50, imagen: "https://i.ibb.co/RCXt6Vm/166806-800-auto.png")
 Producto.create(categoria: 1, nombre: "Cpu Usado Core i7 6th Gen, 8gb, 500gb, HP, dell", descripcion: "Procesador: Intel Core i7 6ta generación. Sistema Operativo: Microsoft Windows 10. RAM: 8 GB. Almacenamiento: 500 GB. Con unidad óptica.", precio: 255.00, imagen: "https://i.ibb.co/ZXD7L1k/166709-800-auto.png");
 Producto.create(categoria: 1, nombre: "Cpu Lenovo gamer Core i7 12700, 1tb+512gb ssd, 16gb RTX 12gb", descripcion: "Procesador: Intel Core i7-12700. RAM: 2x 8GB UDIMM DDR4-3200. Almacenamiento: SSD de 512GB. Gráficos: NVIDIA GeForce RTX 3060 12 GB GDDR6. Sin unidad óptica.", precio: 935.99, imagen: "https://i.ibb.co/Xpb9Lt2/gamer.png");
 Producto.create(categoria: 1, nombre: "AIO HP 24/24FHD/CORE I5-1235U /8GB RAM/ 256GB BLACK", descripcion: "Procesador: Intel Core i5-1235U. RAM: 8 GB de memoria RAM DDR4-3200 MHz (1 de 8 GB). Almacenamiento: Unidad de estado sólido PCIe NVMe de 256 GB. Gráficos: Gráficos: Intel Iris Xe. Sin unidad óptica.", precio: 740.00, imagen: "https://i.ibb.co/MDBSt4Z/aiohp.png");

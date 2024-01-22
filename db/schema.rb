@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_21_223705) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_22_225333) do
   create_table "categoria", primary_key: "cid", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", null: false
@@ -18,10 +18,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_21_223705) do
   end
 
   create_table "detalles", primary_key: "detid", force: :cascade do |t|
-    t.integer "orden_oid"
     t.integer "producto_pid"
     t.integer "cantidad"
-    t.datetime "fecha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,6 +34,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_21_223705) do
     t.string "cod_postal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provincia"
   end
 
   create_table "metodo_pagos", primary_key: "mpid", force: :cascade do |t|
@@ -51,6 +50,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_21_223705) do
     t.datetime "fecha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "total"
   end
 
   create_table "productos", primary_key: "pid", force: :cascade do |t|
@@ -73,7 +73,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_21_223705) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "detalles", "ordens", column: "orden_oid", primary_key: "oid"
   add_foreign_key "detalles", "productos", column: "producto_pid", primary_key: "pid"
   add_foreign_key "domicilios", "usuarios", primary_key: "uid"
   add_foreign_key "ordens", "domicilios", column: "domicilio_did", primary_key: "did"
