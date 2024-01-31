@@ -54,3 +54,5 @@ end
 
 
 gem "pg", "~> 1.5"
+
+gem 'rack-cors'
