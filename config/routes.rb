@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :productos
   resources :usuarios
   resources :domicilios
+  post '/enviar-correo', to: 'correo#enviar_correo'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

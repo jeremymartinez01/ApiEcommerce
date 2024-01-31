@@ -199,6 +199,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  mail
   pg (~> 1.5)
   puma (>= 5.0)
   rack-cors
